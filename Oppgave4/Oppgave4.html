@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+
+
+    <head>
+    <meta charset="utf-8">
+    <title>Animation</title>
+        
+        <style>
+            #animwrap
+            {
+                background-color: rgb(255, 173, 255);
+                min-width: 978px;
+                max-width: 1200px;
+                height: 660px;
+                margin: auto;
+                
+            }
+            
+            .box
+            {
+                position: absolute;
+                width: 60px;
+                height: 70px;
+                background-color: rgb(150,150,150);
+                -webkit-animation: moveBox 12s linear infinite normal;
+            }
+            
+            .box:hover
+            {
+                -webkit-animation-play-state: paused;
+            
+            }
+            
+            
+            
+        #box1
+            {
+                -webkit-animation-delay: 3s;
+            }
+            
+         #box2
+            {
+                -webkit-animation-delay: 6s;
+            }
+            
+         #box3
+            {
+               -webkit-animation-delay: 9s;
+                
+            }
+            
+         #box4
+            {
+               -webkit-animation-delay: 12s;
+            }
+            
+            @-webkit-keyframes moveBox
+            {
+                0%   
+                { 
+                    left: 240px; 
+                    top: 8px;
+                }
+                25%  
+                { 
+                    left: 1380px; 
+                    top: 8px;
+                }
+                50%  
+                {  
+                    left: 1380px; 
+                    top: 597px;
+                }
+    
+                75%  
+                {   
+                    left: 240px; 
+                    top: 598px;
+                }
+    
+                100% 
+                { 
+                    left: 240px; 
+                    top: 8px;
+                }
+        
+        </style>
+    
+    
+    </head>
+
+    <body>
+        
+        <div id="animwrap">
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+        <div id="box4" class="box"></div>
+        </div>
+    
+    </body>
+
+</html>

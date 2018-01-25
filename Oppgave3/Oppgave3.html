@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+    <head> <!--start Head-->
+    
+        <meta charset="utf-8">
+        <Title>TargetTransition</Title>
+        
+        
+        
+        <!--Start Style-->
+        <style>
+            /*Start layout*/
+            body
+            {
+                margin: 0;
+            }
+            
+            
+            #animwrap
+            {
+                background-color: rgb(0,0,0);
+                margin: auto;
+                min-width: 978px;
+                max-width: 1200px;
+                height: 700px;
+            }
+            
+             a
+            {
+            position: relative;
+            padding: 1px 100px 10px;
+            margin: 15px;
+            top: 10px;
+            font-size: 200%;
+            color: rgb(0,0,0);
+            }
+            /*End layout*/
+            
+            
+            /*Start elements*/
+            #gul
+            {
+                background-color: yellow;
+                border: 5px solid rgb(204, 204, 0);
+                text-decoration: none;
+            }
+            
+             #blå
+            {
+                background-color: blue;
+                border: 5px solid rgb(0, 0, 153);
+                text-decoration: none;
+            }
+            
+             #default
+            {
+                background-color: red;
+                border: 5px solid rgb(153, 0, 0);
+                text-decoration: none;
+            }
+            
+            #gul:target ~ #element 
+            { 
+              background: yellow;
+              border:100px;
+              
+            } 
+            /*End elements*/
+            
+            /*Start transition*/
+            #element
+            {
+    
+                height: 10px;
+                width: 10px;
+                -webkit-border-radius: 0px;
+                background-color: red;
+                position: absolute;
+                left: 850px;
+                top: 400px;
+                -webkit-transition-property: height, width, background-color,;
+                -webkit-transition-duration: 4s;
+                -webkit-transition-timing-function:ease-out;
+            }
+            
+   
+            
+            
+            #gul:target ~ #element
+            {
+                background: yellow;
+                -webkit-border-radius: 100%;
+                height: 500px;
+                width: 500px;
+                top: 150px;
+                left: 600px;
+            }
+            
+            #blå:target ~ #element
+            {
+             background: blue;
+                height: 300px;
+                width: 600px;
+                top: 250px;
+                left: 550px;
+            }
+            
+            #default:target ~ #element
+            {
+                
+            }        
+            /*End transition*/
+        </style>
+        <!--End Style-->
+       
+    
+    </head>
+
+
+
+    <body>
+        <div id="animwrap">
+        <!--Start elements-->
+        <a id="gul" href="#gul">Gul sirkel</a>
+        <a id="blå" href="#blå">Stor blå firkant</a>
+        <a id="default" href="#default">Default</a>
+        
+        <div id="element"></div>
+        <!--End elements-->
+        </div>
+    
+    </body>
+
+
+
+
+
+</html>
